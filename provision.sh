@@ -1,4 +1,6 @@
-sudo apt-get update -y && sudo apt-get install -y \
+sleep 30
+sudo apt-get update
+sudo apt-get install -y \
     apt-transport-https \
     curl \
     git \
@@ -13,7 +15,6 @@ sudo apt-get update -y && sudo apt-get install -y \
     vim \
     libpq-dev \
     gnupg \
-    whois \
     libsasl2-dev \
     libldap2-dev \
     libssl-dev
