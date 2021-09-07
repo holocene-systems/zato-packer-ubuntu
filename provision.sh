@@ -28,6 +28,12 @@ sudo apt-get update
 
 sudo apt-get install -y zato 
 
-#cd /opt/zato/current  &&  git pull && ./update.sh
+sudo chown -R zato /opt/zato/current
+
+sudo su - zato -c "pip install --ignore-installed setuptools==57.4.0"
+
+sudo su - zato -c "cd /opt/zato/current  &&  git pull && ./update.sh"
 
 sudo su - zato -c "zato --version"
+
+sudo su - zato -c "zato quickstart ~/env/my-quickstart"
